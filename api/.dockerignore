@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+MealPenalty.Tests/
+MealPenalty.Api/Data/
+.gitignore
+Dockerfile
+.dockerignore

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="MealPenalty.Api/MealPenalty.Api.csproj" />
+  <Project Path="MealPenalty.Application/MealPenalty.Application.csproj" />
+  <Project Path="MealPenalty.Domain/MealPenalty.Domain.csproj" />
+  <Project Path="MealPenalty.Infrastructure/MealPenalty.Infrastructure.csproj" />
+  <Project Path="MealPenalty.Tests/MealPenalty.Tests.csproj" />
+</Solution>
