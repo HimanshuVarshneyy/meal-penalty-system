@@ -128,9 +128,10 @@ export function SimulatePage() {
               <tr key={row.key} className="border-t border-slate-800">
                 <td className="px-3 py-2">
                   <input
-                    className="w-20 rounded border border-slate-700 bg-slate-800 px-2 py-1"
+                    readOnly
+                    className="w-20 cursor-not-allowed rounded border border-slate-700 bg-slate-900 px-2 py-1 text-slate-400"
                     value={row.label}
-                    onChange={(e) => updateRow(row.key, { label: e.target.value })}
+                    placeholder="—"
                   />
                 </td>
                 <td className="px-3 py-2">
@@ -140,9 +141,7 @@ export function SimulatePage() {
                     value={row.workDate}
                     onChange={(e) => {
                       const workDate = e.target.value;
-                      const patch: Partial<SimRow> = { workDate };
-                      if (!row.label.trim()) patch.label = dayLabelFromDate(workDate);
-                      updateRow(row.key, patch);
+                      updateRow(row.key, { workDate, label: dayLabelFromDate(workDate) });
                     }}
                   />
                 </td>
