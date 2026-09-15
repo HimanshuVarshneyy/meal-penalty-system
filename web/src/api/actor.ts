@@ -1,10 +1,11 @@
 const STORAGE_KEY = "mealpenalty.actorName";
+const DEFAULT_ACTOR_NAME = "Guest";
 
 export function getActorName(): string {
   try {
-    return localStorage.getItem(STORAGE_KEY) ?? "";
+    return localStorage.getItem(STORAGE_KEY) || DEFAULT_ACTOR_NAME;
   } catch {
-    return "";
+    return DEFAULT_ACTOR_NAME;
   }
 }
 
